@@ -1,4 +1,4 @@
-class RestaurantController < ApplicationController
+class RestaurantsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_restaurant, only: %i[show edit update destroy]
 

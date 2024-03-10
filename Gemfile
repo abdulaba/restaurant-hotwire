@@ -69,3 +69,12 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem "bootstrap", "~> 5.3"
+gem "font-awesome-rails", "~> 4.7"
+gem "autoprefixer-rails", "~> 10.4"
+gem "simple_form", "~> 5.3"
+
+gem "dotenv-rails", "~> 3.1", :group => :development
+
+gem "sassc-rails", "~> 2.1"
