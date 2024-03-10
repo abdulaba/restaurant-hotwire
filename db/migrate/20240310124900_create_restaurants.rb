@@ -2,7 +2,7 @@ class CreateRestaurants < ActiveRecord::Migration[7.1]
   def change
     create_table :restaurants do |t|
       t.string :name
-      t.string :addreess
+      t.string :address
       t.integer :rating
       t.float :latitude
       t.float :longitude
