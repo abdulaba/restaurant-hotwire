@@ -1,0 +1,10 @@
+<div class="d-flex">
+  <%= restaurant.name %>
+  <%= restaurant.address %>
+  <%= link_to restaurant_path(restaurant) do %>
+    <i class="fa-solid fa-eye"></i>
+  <% end %>
+  <%= link_to restaurant_path(restaurant), data: { turbo_method: :delete } do %>
+    <i class="fa-solid fa-trash-can"></i>
+  <% end %>
+</div>

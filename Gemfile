@@ -71,7 +71,9 @@ end
 gem "devise", "~> 4.9"
 
 gem "bootstrap", "~> 5.3"
-gem "font-awesome-rails", "~> 4.7"
+# gem "font-awesome-rails", "~> 4.7"
+gem "font-awesome-sass", "~> 6.1"
+
 gem "autoprefixer-rails", "~> 10.4"
 gem "simple_form", "~> 5.3"
 

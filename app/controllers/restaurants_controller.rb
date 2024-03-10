@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[show edit update destroy]
 
   def index
-    @restaurant = Restaurant.order_by_created
+    @restaurants = Restaurant.order_by_created
   end
 
   def show
