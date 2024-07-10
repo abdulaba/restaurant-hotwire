@@ -1,0 +1,4 @@
+<%= restaurant.name %>
+<%= restaurant.address %>
+<%= link_to "Eliminar", restaurant_path(restaurant), data: {turbo_method: :delete}%>
+<%= link_to "Editar", edit_restaurant_path(restaurant) %>
