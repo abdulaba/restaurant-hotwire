@@ -15,7 +15,10 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to restaurants_path
+      respond_to do |format|
+        format.html { redirect_to restaurants_path }
+        format.turbo_stream # un template del mismo nombre de la accion
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -34,7 +37,10 @@ class RestaurantsController < ApplicationController
 
   def destroy
     @restaurant.destroy
-    redirect_to restaurants_path, status: :see_other
+    respond_to do |format|
+      format.html { redirect_to restaurants_path, status: :see_other}
+      format.turbo_stream
+    end
   end
 
   private
