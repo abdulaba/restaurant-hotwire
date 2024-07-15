@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       respond_to do |format|
         format.html { redirect_to restaurants_path }
-        format.turbo_stream # un template del mismo nombre de la accion
+        format.turbo_stream { flash.now[:notice] = "El restaurant se ha creado correctamente"}
       end
     else
       render :new, status: :unprocessable_entity
@@ -39,7 +39,7 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
     respond_to do |format|
       format.html { redirect_to restaurants_path, status: :see_other}
-      format.turbo_stream
+      format.turbo_stream { flash.now[:notice] = "El restaurant se ha eliminado correctamente"}
     end
   end
 

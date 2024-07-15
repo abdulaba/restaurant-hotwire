@@ -1,1 +1,26 @@
 @import "font-awesome";
+
+.flash {
+    position:fixed;
+    bottom: 1rem;
+    right: 10%;
+    
+  
+    &__message {
+      font-size: 15px;
+      color: white;
+      padding: 15px;
+      background-color: black;
+      animation: appear-then-fade 2s both;
+      border-radius: 999px;
+    }
+  }
+
+  @keyframes appear-then-fade {
+  0%, 100% {
+    opacity:0
+  }
+  5%, 60% {
+    opacity:1
+  }
+}
