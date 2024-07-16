@@ -29,7 +29,10 @@ class RestaurantsController < ApplicationController
 
   def update
     if @restaurant.update(restaurant_params)
-      redirect_to restaurants_path
+      respond_to do |format|
+        format.html { redirect_to restaurants_path }
+        format.turbo_stream { flash.now[:notice] = "El restaurant se ha editado correctamente"}
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -41,6 +44,10 @@ class RestaurantsController < ApplicationController
       format.html { redirect_to restaurants_path, status: :see_other}
       format.turbo_stream { flash.now[:notice] = "El restaurant se ha eliminado correctamente"}
     end
+  end
+
+  def owner
+    @restaurants = current_user.restaurants.order_by_created
   end
 
   private

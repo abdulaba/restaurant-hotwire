@@ -1,9 +1,0 @@
-<div class="container d-flex justify-content-between align-items-center">
-    <h1>Restaurants</h1>
-    <span><%= link_to "Nuevo",new_restaurant_path, class: "btn btn-primary", data: {turbo_frame: "new_restaurant"} %></span>
-</div>
-<%= turbo_frame_tag "new_restaurant" %>
-<hr>
-<%= turbo_frame_tag "restaurants" do %> 
-    <%= render @restaurants %>
-<% end %> 
