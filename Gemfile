@@ -71,3 +71,5 @@ end
 gem "simple_form", "~> 5.3"
 
 gem "font-awesome-sass", "~> 6.5"
+
+gem "devise", "~> 4.9"
