@@ -1,4 +1,5 @@
 <h1>Restaurants</h1>
-<%= link_to "Nuevo",new_restaurant_path %>
+<%= link_to "Nuevo",new_restaurant_path, data:{turbo_frame: :new_restaurant} %>
 <hr>
+<%= turbo_frame_tag :new_restaurant %> 
 <%= render @restaurants %>
